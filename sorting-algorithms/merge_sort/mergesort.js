@@ -91,5 +91,4 @@ function merge(arr1, arr2){
     return res;
 }
 
-console.log(mergeSort(arr1))
-
+console.log(mergeSort(arr1));
