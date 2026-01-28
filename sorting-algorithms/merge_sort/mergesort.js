@@ -92,3 +92,4 @@ function merge(arr1, arr2){
 }
 
 console.log(mergeSort(arr1))
+
