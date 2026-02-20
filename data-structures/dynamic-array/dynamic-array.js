@@ -277,7 +277,7 @@ class DynamicArray {
         for(let i = 0; i < this.#size; ++i){
             if(i in arr){
                 if(fn(this.#arr[i], i, this.#arr)){
-                    arr[i] = this.arr[i];
+                    arr[i] = this.#arr[i];
                 }
             }
         }

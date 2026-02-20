@@ -339,7 +339,7 @@ class SinglyLinkedList {
     let left = this.#mergeSort(head);
     let right = this.#mergeSort(slow);
 
-    return this.merge(left, right)
+    return this.merge(left, right);
   }
 
    merge(list1, list2){
