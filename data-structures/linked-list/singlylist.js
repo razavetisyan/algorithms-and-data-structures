@@ -58,7 +58,7 @@ class SinglyLinkedList {
     }
   }
 
-  getHead(){
+  getHead() {
     return this.#head;
   }
 
@@ -316,22 +316,22 @@ class SinglyLinkedList {
     };
   }
 
-  sort(){
+  sort() {
     this.#head = this.#mergeSort(this.#head);
     return this;
   }
 
-  #mergeSort(head){
-    if(!head || !head.next) return head;
+  #mergeSort(head) {
+    if (!head || !head.next) return head;
 
     let prev = null;
     let slow = head;
     let fast = head;
 
-    while(fast && fast.next){
-        prev = slow;
-        slow = slow.next;
-        fast = fast.next.next;
+    while (fast && fast.next) {
+      prev = slow;
+      slow = slow.next;
+      fast = fast.next.next;
     }
 
     prev.next = null;
@@ -342,20 +342,20 @@ class SinglyLinkedList {
     return this.merge(left, right);
   }
 
-   merge(list1, list2){
+  merge(list1, list2) {
     let dummy = new Node(null);
     let current = dummy;
 
-    while(list1 && list2){
-        if(list1.value <= list2.value){
-            current.next = list1;
-            current = current.next;
-            list1 = list1.next;
-        }else{
-            current.next = list2;
-            current = current.next;
-            list2 = list2.next;
-        }
+    while (list1 && list2) {
+      if (list1.value <= list2.value) {
+        current.next = list1;
+        current = current.next;
+        list1 = list1.next;
+      } else {
+        current.next = list2;
+        current = current.next;
+        list2 = list2.next;
+      }
     }
 
     current.next = list1 || list2;
@@ -363,9 +363,3 @@ class SinglyLinkedList {
     return dummy.next;
   }
 }
-
-
-
-
-
-

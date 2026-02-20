@@ -341,8 +341,7 @@ class Deque {
     const newDeq = new Deque(this.#cap);
 
     for (let i = 0; i < this.#size; ++i) {
-        newDeq.push_back(fn(this.at(i), i, this.#deq));
-      
+      newDeq.push_back(fn(this.at(i), i, this.#deq));
     }
 
     return newDeq;
@@ -352,9 +351,9 @@ class Deque {
     const newDeq = new Deque(this.#cap);
 
     for (let i = 0; i < this.#size; ++i) {
-        if (fn(this.at(i), i, this.#deq)) {
-          newDeq.push_back(this.at(i));
-        }
+      if (fn(this.at(i), i, this.#deq)) {
+        newDeq.push_back(this.at(i));
+      }
     }
 
     return newDeq;
