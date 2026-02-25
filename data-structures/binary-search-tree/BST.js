@@ -594,36 +594,3 @@ class BST {
   }
 }
 
-let tree = new BST();
-
-tree.insert(10);
-tree.insert(5);
-tree.insert(20);
-tree.insert(3);
-tree.insert(7);
-tree.insert(15);
-tree.insert(30);
-
-console.log("Size:", tree.size());              // 7
-console.log("Min:", tree.find_min());           // 3
-console.log("Max:", tree.find_max());           // 30
-console.log("Height:", tree.get_height());      // 3
-console.log("Depth of 15:", tree.get_depth(15));
-console.log("Contains 7:", tree.contains(7));   // true
-console.log("Balanced:", tree.is_balanced());   // true
-console.log("Valid BST:", tree.validate_BST());// true
-
-console.log("Inorder:", tree.toArray());        // [3,5,7,10,15,20,30]
-
-console.log("Iterator:");
-for (let v of tree) {
-  console.log(v);
-}
-
-console.log("Entries:");
-for (let e of tree.entries()) {
-  console.log(e);
-}
-
-let clone = tree.clone();
-console.log("Equals clone:", tree.equals(clone)); // true
