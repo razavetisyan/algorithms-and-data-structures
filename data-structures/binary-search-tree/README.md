@@ -28,6 +28,17 @@ postorder_rec() / postorder_itr()
 
 level_order()
 
+✅ Time and Space complexity
+
+| Operation         | Average Case | Worst Case |
+| ----------------- | ------------ | ---------- |
+| Search            | O(log n)     | O(n)       |
+| Insert            | O(log n)     | O(n)       |
+| Delete            | O(log n)     | O(n)       |
+| Inorder Traversal | O(n)         | O(n)       |
+| Space             | O(n)         | O(n)       |
+
+
 ✅ TEST
 
 let tree = new BST();
