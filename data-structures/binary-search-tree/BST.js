@@ -313,7 +313,7 @@ class BST {
     while (current) {
       if (value < current.value) {
         successor = current;
-        current = current.left;
+        current = current.left; 
       } else {
         current = current.right;
       }
@@ -379,7 +379,7 @@ class BST {
 
       inorder(node.left);
       res.push(node.value);
-      inorder(node.right);
+      inorder(node.right);  
     };
 
     inorder(this.#root);
