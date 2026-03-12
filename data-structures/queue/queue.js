@@ -62,7 +62,7 @@ class Queue {
   }
 
   dequeue() {
-    if (this.isEmpty()) {
+    if (this.isEmpty()) { 
       throw new Error("queue is empty");
     }
 
